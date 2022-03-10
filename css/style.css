@@ -62,12 +62,10 @@ img {
   overflow: hidden;
   border: 1px solid var(--border);
   text-align: left;
-
 }
 
 .post__header {
   background-color: var(--primary);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +93,6 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-
   border: 1px solid var(--img-border);
   border-radius: 50%;
 }
@@ -127,7 +124,6 @@ img {
   display: flex;
   overflow-y: hidden;
   overflow-x: auto;
-
   width: 100%;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -163,7 +159,6 @@ img {
   background-color: transparent;
   border: none;
   cursor: pointer;
-
   padding: 8px;
 }
 
@@ -175,7 +170,6 @@ img {
   display: flex;
   align-items: center;
   gap: 4px;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,7 +218,6 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-
   border: 1px solid var(--img-border);
   border-radius: 50%;
 }

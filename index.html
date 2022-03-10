@@ -60,13 +60,43 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
-        <section class="container">
+        <section class="container mt-5">
             <h5>Question 1: How does javascript work?</h5>
             <p>Answer: JavaScript is a single-threaded, high-level, interpreted language not a compiled language. Programing language such as C++ or Java needs to be compiled first then it's run. Compiler translates the source code into bytecode which the machine can understands and execute it. On the other hand JavaScript has no compilation step. Instead an interpreter in the browser reads all the JavaScript code, interprets every line and then runs it. Nowadays, modern browsers use a technology known as Just In Time (JIT) compilation which compiles JavaScript code to executable bytecode just as it's about to run.</p>
             <h5>Question 2: What does javascript event loop do?</h5>
             <p>Answer: The mystery behind JavaScript's asynchronous programming is event loop. JavaScript executes all the operation on a single thread but using some smart data structure it gives us the taste of multi threading. Let's take a look on the back end and see what happened. The call stack is liable for monitoring every one of the tasks in line to be executed. When a function is finished it's popped from the stack. The event queue sends new function to the stack for processing. It follows the queue data structure to manage the right sequence in which operation should be sent for execution. The event loop manage this process, it continuously checks whether the call stack is blank or not. If it's blank new functions are added from the event queue, if not then current function call is processed.</p>
-            <h5>Question 3: What is the difference between local storage and session storage?</h5>
+            <h5>Question 3: What are the differences between local storage and session storage?</h5>
             <p>Answer: </p>
+            <table class="table table-bordered mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">Local Storage</th>
+                    <th scope="col" class="text-center">Session Storage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Local storage is not session-based, it can be deleted via JavaScript or manually</td>
+                    <td>Session storage is a session-based and works per window or tab, this means the data is stored only for the duration of a session</td>
+                  </tr>
+                  <tr>
+                    <td>Local storage's data has no expiration date</td>
+                    <td>Session storage's data is gone when the browser tab is closed</td>
+                  </tr>
+                  <tr>
+                    <td>Local storage accessible from any window</td>
+                    <td>Session storage accessible from only the same tab</td>
+                  </tr>
+                  <tr>
+                    <td>Local storage's data shared between all tabs and windows from the same origin</td>
+                    <td>Session storage's data exists only within the current browser tab</td>
+                  </tr>
+                  <tr>
+                    <td>Local storage's data remains after the browser restart and even operating system (OS) reboot</td>
+                    <td>Session storage's data survives page refresh, but not closing the tab</td>
+                  </tr>
+                </tbody>
+              </table>
         </section>
         <footer></footer>
 

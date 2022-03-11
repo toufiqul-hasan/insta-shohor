@@ -1,116 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- google Montserrat font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
-
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
-
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts"></div>
-            <h1 id="liked-posts" class="mb-5">Liked posts</h1>
-            <div id="liked"></div>
-            <h1 id="reported-posts" class="mb-5">Reported posts</h1>
-            <div id="reported"></div>
-        </main>
-        <section id="qna" class="container mt-5">
-          <h2 class="text-center">Question & Answer</h2>
-          <h5>Question 1: How does javascript work?</h5>
-          <p>Answer: JavaScript is a single-threaded, high-level, interpreted language not a compiled language.
-            Programing language such as C++ or Java needs to be compiled first then it's run. Compiler translates the
-            source code into bytecode which the machine can understands and execute it. On the other hand JavaScript has
-            no compilation step. Instead an interpreter in the browser reads all the JavaScript code, interprets every
-            line and then runs it. Nowadays, modern browsers use a technology known as Just In Time (JIT) compilation
-            which compiles JavaScript code to executable bytecode just as it's about to run.</p>
-          <h5>Question 2: What does javascript event loop do?</h5>
-          <p>Answer: The mystery behind JavaScript's asynchronous programming is event loop. JavaScript executes all the
-            operation on a single thread but using some smart data structure it gives us the taste of multi threading.
-            Let's take a look on the back end and see what happened. The call stack is liable for monitoring every one
-            of the tasks in line to be executed. When a function is finished it's popped from the stack. The event queue
-            sends new function to the stack for processing. It follows the queue data structure to manage the right
-            sequence in which operation should be sent for execution. The event loop manage this process, it
-            continuously checks whether the call stack is blank or not. If it's blank new functions are added from the
-            event queue, if not then current function call is processed.</p>
-          <h5>Question 3: What are the differences between local storage and session storage?</h5>
-          <p>Answer: </p>
-          <table class="table table-bordered mb-5">
-            <thead>
-              <tr>
-                <th scope="col" class="text-center">Local Storage</th>
-                <th scope="col" class="text-center">Session Storage</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Local storage is not session-based, it can be deleted via JavaScript or manually</td>
-                <td>Session storage is a session-based and works per window or tab, this means the data is stored only
-                  for the duration of a session</td>
-              </tr>
-              <tr>
-                <td>Local storage's data has no expiration date</td>
-                <td>Session storage's data is gone when the browser tab is closed</td>
-              </tr>
-              <tr>
-                <td>Local storage accessible from any window</td>
-                <td>Session storage accessible from only the same tab</td>
-              </tr>
-              <tr>
-                <td>Local storage's data shared between all tabs and windows from the same origin</td>
-                <td>Session storage's data exists only within the current browser tab</td>
-              </tr>
-              <tr>
-                <td>Local storage's data remains after the browser restart and even operating system (OS) reboot</td>
-                <td>Session storage's data survives page refresh, but not closing the tab</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <footer></footer>
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="#">Insta-Sohor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-link active" role="button" onclick="switchTab( 'posts' )"><i class="fa-solid fa-house"></i></li>
+            <li class="nav-link active" role="button" onclick="switchTab( 'liked' )"><i class="fa-solid fa-heart text-danger"></i></li>
+            <li class="nav-link active" role="button" onclick="switchTab( 'reported' )"><i class="fa-solid fa-eye-slash"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+      <div id="posts"></div>
+      <h1 id="liked-posts" class="mb-5">Liked posts</h1>
+      <div id="liked"></div>
+      <h1 id="reported-posts" class="mb-5">Reported posts</h1>
+      <div id="reported"></div>
+    </main>
+    <section id="qna" class="container mt-5">
+      <h2 class="text-center">Question & Answer</h2>
+      <h5>Question 1: How does JavaScript work?</h5>
+      <p>Answer: JavaScript is a single-threaded, high-level, interpreted language, not a compiled language. Programing language such as C, C#, C++, Java etc. needs to be compiled first then it's run. Compiler translates the source code into bytecode which the machine can understands and execute it. On the other hand JavaScript has no compilation step. Instead an interpreter in the browser reads all the JavaScript code, interprets every line and then runs it. These days, modern browser use a technology known as Just In Time (JIT) compilation which compiles JavaScript code to executable bytecode just as it's about to run. JavaScript is also a client side scripting language which means it runs at the client side or on the client machine inside the browser, but the most important thing to remember that client's browser also needs to support the JavaScript or it must be enabled the JavaScript. Modern browsers support JavaScript and have their own JavaScript engines. For example, Google Chrome JavaScript engine name is V8. We already know that JavaScript is an interpreted language that's why the JavaScript engine converts the JavaScript code line by line then runs it in the same manner instead of converting the whole program once.</p>
+      <h5>Question 2: What does JavaScript event loop do?</h5>
+      <p>Answer: The mystery behind JavaScript's asynchronous programming is event loop. JavaScript executes all the operation on a single thread but using some smart data structure it gives us the taste of multi threading. Let's take a look on the back end and see what happened. The call stack is liable for monitoring every one of the tasks in line to be executed. When a function is finished it's popped from the call stack. The event queue sends new function to the call stack for processing. It follows the queue data structure to manage the right sequence in which function should be sent for execution. The event loop manage this process, it continuously checks whether the call stack is blank or not. If it's blank new functions are added from the event queue, if not then current function call is processed.</p>
+      <h5>Question 3: What are the differences between local storage and session storage?</h5>
+      <p>Answer: </p>
+      <table class="table table-bordered mb-5">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">Local Storage</th>
+            <th scope="col" class="text-center">Session Storage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Local storage is not session-based, it can be deleted via JavaScript or manually</td>
+            <td>Session storage is a session-based and works per window or tab, this means the data is stored only for the duration of a session</td>
+          </tr>
+          <tr>
+            <td>Local storage's data has no expiration date</td>
+            <td>Session storage's data is gone when the browser tab is closed</td>
+          </tr>
+          <tr>
+            <td>Local storage accessible from any window</td>
+            <td>Session storage accessible from only the same tab</td>
+          </tr>
+          <tr>
+            <td>Local storage's data shared between all tabs and windows from the same origin</td>
+            <td>Session storage's data exists only within the current browser tab</td>
+          </tr>
+          <tr>
+            <td>Local storage's data remains after the browser restart and even operating system (OS) reboot</td>
+            <td>Session storage's data survives page refresh, but not closing the tab</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer></footer>
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+  </body>
 
 </html>

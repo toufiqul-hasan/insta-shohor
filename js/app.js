@@ -41,8 +41,8 @@ const switchTab = (id) => {
     document.getElementById("reported").style.display = "none";
   } 
   else if (id === "liked") {
-    document.getElementById("liked").style.display = "block";
     document.getElementById("liked-posts").style.display = "block";
+    document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("qna").style.display = "none";
     document.getElementById("reported-posts").style.display = "none";
@@ -50,8 +50,8 @@ const switchTab = (id) => {
     displayLikedPosts();
   } 
   else {
-    document.getElementById("reported").style.display = "block";
     document.getElementById("reported-posts").style.display = "block";
+    document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("qna").style.display = "none";
     document.getElementById("liked-posts").style.display = "none";
@@ -79,26 +79,17 @@ const createPost = (post) => {
     </div>
       <div class="post__footer">
         <div class="post__buttons">
-          <button class="post__button" onclick="addToLiked(${post.id})">
-            <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
-          </button>
-          <button class="post__button">
-            <i class="fa-solid fa-comment"></i>
-          </button>
+          <button class="post__button" onclick="addToLiked(${post.id})"><i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i></button>
+          <button class="post__button"><i class="fa-solid fa-comment"></i></button>
           <div class="post__indicators"></div>
-          <button class="post__button post__button--align-right" onclick="reportPost(${post.id})">
-            <i class="fa-solid fa-ban"></i>
-          </button>
+          <button class="post__button post__button--align-right" onclick="reportPost(${post.id})"><i class="fa-solid fa-ban"></i></button>
         </div>
         <div class="post__content">${displayContent(post.description)}</div>
         <div class="post__infos">
           <div class="post__likes">
-            <a href="#" class="post__likes-avatar">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="User Picture" />
-            </a>
+            <a href="#" class="post__likes-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="User Picture" /></a>
             <span>Liked by
-              <a class="post__name--underline" href="#">user123</a> and
-              <a href="#">73 others</a>
+              <a class="post__name--underline" href="#">user123</a> and <a href="#">73 others</a>
             </span>
           </div>
           <hr/>
@@ -112,7 +103,8 @@ const createPost = (post) => {
           </div>
           <span class="post__date-time">30 minutes ago</span>
         </div>
-      </div>`;
+      </div>
+      `;
   return div;
 };
 

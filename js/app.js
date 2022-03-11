@@ -130,6 +130,7 @@ const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
+    div.classList.add("mb-5");
     document.getElementById("liked").appendChild(div);
   });
 };
@@ -139,6 +140,7 @@ const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
+    div.classList.add("mb-5");
     document.getElementById("reported").appendChild(div);
   });
 };

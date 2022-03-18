@@ -1,6 +1,7 @@
 let posts = [];
 const likedPostsId = [];
 const reportedPostsId = [];
+
 document.getElementById("liked-posts").style.display = "none";
 document.getElementById("reported-posts").style.display = "none";
 

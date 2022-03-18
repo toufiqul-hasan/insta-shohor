@@ -85,7 +85,7 @@ const createPost = (post) => {
         <div class="post__content">${displayContent(post.description)}</div>
         <div class="post__infos">
           <div class="post__likes">
-            <a href="#" class="post__likes-avatar"><img src="https://this-person-does-not-exist.com/img/avatar-e97dcfa039bd8a0509afd2e25348e441.jpg" alt="User Picture" /></a>
+            <a href="#" class="post__likes-avatar"><img src="https://i.ibb.co/HrzkpVM/user2.jpg" alt="User Picture" /></a>
             <span>Liked by
               <a class="post__name--underline" href="#">user123</a> and <a href="#">73 others</a>
             </span>

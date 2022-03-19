@@ -1,9 +1,9 @@
+document.getElementById("liked-posts").style.display = "none";
+document.getElementById("reported-posts").style.display = "none";
+
 let posts = [];
 const likedPostsId = [];
 const reportedPostsId = [];
-
-document.getElementById("liked-posts").style.display = "none";
-document.getElementById("reported-posts").style.display = "none";
 
 const getLikedPosts = () => {
   return posts.filter((post) => likedPostsId.includes(post.id));
